@@ -44,12 +44,13 @@
           <a href="http://blog.paperblanks.com/wp-content/uploads/2018/02/Seuss.jpg"><img src="img/quote.jpg"alt="Dr. Seuss" class="center"></a>
           <a href="http://blog.paperblanks.com/2018/03/10-inspiring-quotes-to-justify-staying-home-to-read-all-weekend/" class="center"> EndPaper Blog </a>
         </div>
-        
+
       </div>
     </div>
     </div>
     <div class="jumbotron jumbotron-fluid">
-    <table style="width:100%">
+    <table id= "tasktable" style="width:100%">
+      <thead>
       <tr>
         <th>Book Title</th>
         <th>Author/s</th>
@@ -58,6 +59,8 @@
         <th>Page Count</th>
         <th>MSRP</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
         <td>How to succeed</td>
         <td>Brian Moore</td>
@@ -90,8 +93,50 @@
         <td>10</td>
         <td>5.01</td>
       </tr>
+    </tbody>
     </table>
   </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h1 class="pageheader Hello" align="center"> Add New Book</h1>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron jumbotron-fluid">
+  <form>
+    <div class="form-row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Book Title">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Author">
+      </div>
+    </div>
+    <br>
+    <div class="form-row">
+      <div class="col">
+        <input type="number" class="form-control" placeholder="Year Published">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Publisher">
+      </div>
+    </div>
+    <br>
+    <div class="form-row">
+      <div class="col">
+        <input type="number" class="form-control" placeholder="Page Count">
+      </div>
+      <div class="col">
+        <input type="number" class="form-control" placeholder="MSRP">
+      </div>
+    </div>
+    <br>
+    <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-2 center" id="buttoncolor">Submit</button>
+  </div>
+  </form>
+</div>
   </main>
   <footer class="footer navbar-fixed-bottom">
     <div class="container-fluid">
@@ -111,5 +156,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src='js/tablesort.min.js'></script>
+    <script>
+    new Tablesort(document.getElementById('tasktable'));
+    </script>
+
   </body>
 </html>
