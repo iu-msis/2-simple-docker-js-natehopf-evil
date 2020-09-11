@@ -6,15 +6,6 @@ body{
 .navbarfont{
   color: white;
 }
-th, td {
-  padding: 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd
-}
-tr:hover {background-color: #f5f5f5;}
-th {
-  background-color: grey;
-  color: white;
 }
 footer{
     background-color: black;
@@ -30,8 +21,8 @@ footer{
     left: 0pt;
 }
   .navbar-custom{
-    background-color: black;
-    color: white;
+    background-color: lightblue;
+    color: black;
 }
 .navbar-custome:hover{color: lightblue}
 .center {
@@ -52,3 +43,42 @@ footer{
   background-color: blue;
   color: white;
 }
+.custome-navbar .navbar-toggler-icon{
+  background-color: white;
+}
+
+/**Table Sort **/
+th[role=columnheader]:not(.no-sort) {
+	cursor: pointer;
+}
+
+th[role=columnheader]:not(.no-sort):after {
+	content: '';
+	float: right;
+	margin-top: 7px;
+	border-width: 0 4px 4px;
+	border-style: solid;
+	border-color: #404040 transparent;
+	visibility: hidden;
+	opacity: 0;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+th[aria-sort=ascending]:not(.no-sort):after {
+	border-bottom: none;
+	border-width: 4px 4px 0;
+}
+
+th[aria-sort]:not(.no-sort):after {
+	visibility: visible;
+	opacity: 0.4;
+}
+
+th[role=columnheader]:not(.no-sort):hover:after {
+	visibility: visible;
+	opacity: 1;
+}
+/* reference for table sort http://tristen.ca/tablesort/demo/ */
