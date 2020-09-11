@@ -1,6 +1,8 @@
 html,
 
+/**Table Sort **/
 
+/* reference for table sort http://tristen.ca/tablesort/demo/ */
 th[role=columnheader]:not(.no-sort) {
 	cursor: pointer;
 }
@@ -94,7 +96,3 @@ footer{
 .custome-navbar .navbar-toggler-icon{
   background-color: white;
 }
-
-/**Table Sort **/
-
-/* reference for table sort http://tristen.ca/tablesort/demo/ */
