@@ -27,41 +27,48 @@
   </div>
 </nav>
 <main>
+  <div id="userProfile">
     <div class="jumbotron jumbotron-fluid">
       <div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h1 class="display-4 center">BossMan Pitt</h1>
+        <center>
+        <h1 class="display-4 center">User Information</h1>
+        <a v-bind:href=userImage>
+          <img v-bind:src=userImage class="rounded-circle shadow border mt-4" width="100px">
+        </a>
+      </center>
 
       </div>
       <div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <a href="https://media1.popsugar-assets.com/files/thumbor/4UYUg9UKWqqhaFfElFDU9bKMRgQ/356x1145:1857x2646/fit-in/500x500/filters:format_auto-!!-:strip_icc-!!-/2019/09/04/970/n/1922398/cc3fa7b15d70381d55bd82.88203803_/i/Brad-Pitt.jpg"><img src="img/Brad-Pitt.jpg" alt="BossMan" class="imageclass center"></a>
-        <a href="https://www.popsugar.com/Brad-Pitt" class="center">Popsugar</a>
+
       </div>
     </div>
     <div class="jumbotron jumbotron-fluid">
-      <div id="begginer1" class="container col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h3 v-bind:title="message">User Information</h3>
-        <div>
-          <span class"firstname">{{oneuser.firstname}}</span>
-          <span class="lastname">{{oneuser.lastname}}</span>
-          <span class="origin">{{oneuser.origin}}</span>
-          <span class="birthdate">{{oneuser.birthdate}}</span>
-          <span class="age">{{oneuser.age}}</span>
-        </div>
+      <div class="container col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <h4>First Name - {{userName}}</h4>
+        <h4>Last Name - {{userLast}}</h4>
+        <h4>Birthdate - {{userDob}}</h4>
+        <h4>Age - {{userAge}}</h4>
+        <h4>Country - {{userCountry}}</h4>
       </div>
     </div>
     <div class="jumbotron jumbotron-fluid">
+      <center>
       <div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <h3 class="display-4 center">About Me</h3>
-        <p class="lead center">Charismatic and energetic. Enjoy the fine arts and swordfish.Always wanted to skydive!</p>
+        <p class="lead center">Charismatic and energetic. Enjoy the fine arts and swordfish. Always wanted to skydive!</p>
       </div>
-      <a href="mailto:bossman123@gmail.com"> <button type="submit" class="btn btn-primary mb-2 center" id="buttoncolor">Message Me!</button></a>
+      <div>
+        <a v-bind:href= "userEmail"> <button type="submit" class="btn btn-primary mb-2 center" id="buttoncolor">Message Me!</button></a>
+      </div>
+    </center>
     </div>
+  </div>
   </main>
   <footer class="footer navbar-fixed-bottom">
     <div class="container-fluid">
     <div class="row">
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><h4>Contact Info</h4><hr>
-        <p><a class="email" href="aa">Email: bossman122@gmail.com</a></p>
+        <p><a>(317)-225 6547</a></p>
         </div>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
