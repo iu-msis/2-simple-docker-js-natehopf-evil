@@ -27,7 +27,9 @@
   </div>
 </nav>
 <main>
+
   <div id="userProfile">
+    <form method="post" v-on:submit.prevent="fetchUser">
     <div class="jumbotron jumbotron-fluid">
       <div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <center>
@@ -58,6 +60,7 @@
         <p class="lead center">Charismatic and energetic. Enjoy the fine arts and swordfish. Always wanted to skydive!</p>
       </div>
       <div>
+        <a> <button type="submit" class="btn btn-primary mb-2 center" id="buttoncolor">Refresh</button></a>
         <a v-bind:href= "userEmail"> <button type="submit" class="btn btn-primary mb-2 center" id="buttoncolor">Message Me!</button></a>
       </div>
     </center>
@@ -77,6 +80,7 @@
         <p>Apartment 4650</p>
         </div>
     </div>
+  </form>
     </div>
   </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
