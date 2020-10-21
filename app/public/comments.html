@@ -31,11 +31,12 @@
   </div>
   </nav>
 <main>
+<div id="Commentsjs">
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h1 class="pageheader" align="center"> Please submit your comments below</h1>
+          <h1 class="pageheader Hello" align="center"> Comment Info</h1>
         </div>
       </div>
       </div>
@@ -47,34 +48,24 @@
         </div>
       </div>
     </div>
+
     <div class="jumbotron jumbotron-fluid">
-    <table id= "tasktable" style="width:100%">
-      <thead>
+    <table style="width:100%" id="commentTable">
+      <thead id="mytablehead">
       <tr>
-        <th>ID</th>
-        <th>Comments</th>
+        <th scope="col">ID</th>
+        <th scope="col">Comments</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>How to succeed</td>
-        <td>Brian Moore</td>
-      </tr>
-      <tr>
-        <td>Make Friends</td>
-        <td>Justin Voore</td>
-      </tr>
-      <tr>
-        <td>What is MSIS?</td>
-        <td>Dorothy Miller</td>
-      </tr>
-      <tr>
-        <td>Recruiting 101</td>
-        <td>Nike matrix</td>
+    <tbody id="commentTableBody">
+      <tr class="Comments" v-for="Comment in Comments">
+        <td class="id">{{Comment.id}}</td>
+        <td class="commentText">{{Comment.commentText}}</td>
       </tr>
     </tbody>
     </table>
   </div>
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -83,19 +74,14 @@
     </div>
   </div>
   <div class="jumbotron jumbotron-fluid">
-  <form>
-    <div class="form-row">
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Book Title">
-      </div>
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Author">
-      </div>
+  <form v-on:submit.prevent="createComment()" id="newCommentForm">
+    <div class="users">
+        <label for="commentText">Comment Text</label>
+        <input type="text" v-model="newComment.commentText" class="form-control" id="commentText" placeholder="Comment">
     </div>
     <br>
-    <div class="col-auto">
-    <button type="submit" class="btn btn-primary mb-2 center" id="buttoncolor">Submit</button>
-  </div>
+      <input type="submit" value="Create Comment" class="button" id="submitNewComment">
+    </div>
   </form>
 </div>
   </main>
@@ -117,9 +103,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src='js/tablesort.min.js'></script>
-    <script>
-    new Tablesort(document.getElementById('tasktable'));
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src='js/comments.app.js'></script>
   </body>
 </html>
