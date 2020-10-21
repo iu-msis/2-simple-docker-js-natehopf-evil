@@ -27,6 +27,9 @@
       <li class="nav-item">
         <a class="nav-link navbar-custom" href="Aboutme.html">Website Feedback</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link navbar-custom" href="comments.html">Comments</a>
+      </li>
     </ul>
   </div>
   </nav>
@@ -76,11 +79,11 @@
   <div class="jumbotron jumbotron-fluid">
   <form v-on:submit.prevent="createComment()" id="newCommentForm">
     <div class="users">
-        <label for="commentText">Comment Text</label>
-        <input type="text" v-model="newComment.commentText" class="form-control" id="commentText" placeholder="Comment">
+        <label for="commentText">Comment Area</label>
+        <input type="text" v-model="newComment.commentText" class="form-control" id="commentText" placeholder="Type Comment Here">
     </div>
     <br>
-      <input type="submit" value="Create Comment" class="button" id="submitNewComment">
+      <input type="submit" value="Create Comment" class="button btn btn-primary mb-2 center" id="submitNewComment">
     </div>
   </form>
 </div>
